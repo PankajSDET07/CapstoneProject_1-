@@ -1,0 +1,9 @@
+<!-- testng.xml -->
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="CapstoneProjectSuite">
+    <test name="CapstoneProjectTest">
+        <classes>
+            <class name="com.capstoneproject.tests.AddToCartTest"/>
+        </classes>
+    </test>
+</suite>
