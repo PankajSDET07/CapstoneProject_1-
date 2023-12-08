@@ -1,0 +1,61 @@
+curl --location 'https://restcountries.com/v3.1/currency/inr'
+
+// for 200 success response 
+
+Ex test cases:
+// Positive Test Case
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+pm.test("Response should contain country information", function () {
+    pm.response.to.have.jsonBody('country');
+});
+
+----------------------------------------------------------------------------------------
+curl --location 'https://restcountries.com/v3.1/currency/infg' 
+
+//because the path value is incorrect so we will get 404 
+
+// Negative Test Case
+pm.test("Status code is 404 for invalid currency", function () {
+    pm.response.to.have.status(404);
+});
+
+
+-----------------------------------------------------------------------------
+create csv file
+currency,expected_status
+inr,200
+invalid_currency,404
+
+
+in postman pre-request script we can write the script
+
+// Read data from CSV
+const csvData = pm.iterationData.get('currency_test_data');
+pm.environment.set('currency', csvData.currency);
+pm.environment.set('expected_status', csvData.expected_status);
+
+
+positive test case request, update the URL to use the environment variable
+// Update the request URL to use dynamic data
+pm.sendRequest({
+    url: `https://restcountries.com/v3.1/currency/${pm.environment.get('currency')}`,
+    method: 'GET',
+}, function (err, response) {
+    
+});
+
+------------------------------------------------------------------------------------
+assertion
+// Positive Test Case
+pm.test("Status code is correct", function () {
+    pm.response.to.have.status(Number(pm.environment.get('expected_status')));
+});
+
+pm.test("Response should contain country information", function () {
+    pm.response.to.have.jsonBody('country');
+});
+
+
