@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-12-08T23:31:24 IST" name="CapstoneProjectSuite" finished-at="2023-12-08T23:31:33 IST" duration-ms="9296">
+    <groups>
+    </groups>
+    <test started-at="2023-12-08T23:31:24 IST" name="CapstoneProjectTest" finished-at="2023-12-08T23:31:33 IST" duration-ms="9296">
+      <class name="com.capstoneproject.tests.AddToCartTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.capstoneproject.tests.AddToCartTest@149e0f5d]" started-at="2023-12-08T23:31:12 IST" name="setUp" finished-at="2023-12-08T23:31:24 IST" duration-ms="12332" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testAddToCart()[pri:0, instance:com.capstoneproject.tests.AddToCartTest@149e0f5d]" started-at="2023-12-08T23:31:24 IST" name="testAddToCart" finished-at="2023-12-08T23:31:33 IST" duration-ms="9232" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddToCart -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.capstoneproject.tests.AddToCartTest@149e0f5d]" started-at="2023-12-08T23:31:33 IST" name="tearDown" finished-at="2023-12-08T23:31:35 IST" duration-ms="1580" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.capstoneproject.tests.AddToCartTest -->
+    </test> <!-- CapstoneProjectTest -->
+  </suite> <!-- CapstoneProjectSuite -->
+</testng-results>
